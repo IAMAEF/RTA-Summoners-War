@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap");
+
+:root {
+  --bg: #120f19;
+  --bg-grid: #171220;
+  --panel: #1d1828;
+  --panel-alt: #251e33;
+  --line: #332b44;
+  --text: #f3eff9;
+  --text-dim: #9a93ac;
+  --text-faint: #6e667f;
+  --gold: #d8b36a;
+  --gold-soft: rgba(216, 179, 106, 0.14);
+  --danger: #e2572b;
+  --wind: #4fae7b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: radial-gradient(circle at 50% -10%, var(--bg-grid), var(--bg) 60%);
+  color: var(--text);
+  font-family: "Sora", sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.font-display {
+  font-family: "Cinzel", serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+.sw-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.sw-scroll::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 4px;
+}
+.sw-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0px rgba(216, 179, 106, 0);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(216, 179, 106, 0.35);
+  }
+}
+.sw-active-panel {
+  animation: pulseGlow 2.2s ease-in-out infinite;
+}
+
